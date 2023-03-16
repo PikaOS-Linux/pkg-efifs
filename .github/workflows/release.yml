@@ -35,6 +35,9 @@ jobs:
     
     - name: Build Package
       run: ./main.sh
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
     - name: Release Package
       run: ./release.sh
